@@ -15,17 +15,19 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
     <div>
       <h1>Produtos</h1>
       <div class="container">
+        <router-link to="produto">
         <div class="card" v-for="produto in produtos" :key="produto.id">
-          <h1 class="card--title">{{ produto.title }}</h1>
-          <p>{{ produto.description }}</p>
-          <p>{{ formatPrice(produto.price) }}</p>
           <img class="card--avatar" :src="produto.image" :alt="produto.title" />
+          <h1 class="card--title">{{ produto.title }}</h1>
+          <p>{{ formatPrice(produto.price) }}</p>
+          <p>A avaliação do produto é: {{ produto.rating.rate }}</p>
         </div>
+      </router-link>
       </div>
     </div>
   </template>
   <style scoped>
-  .container {
+  .container a {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -33,8 +35,9 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
     align-items: center;
     margin: auto;
     padding: 1rem 0;
+    margin: 0 4rem;
   }
-  .card {
+    .card {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,10 +49,11 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
     border-radius: 10px;
     margin: auto;
     overflow: hidden;
+    padding-bottom: 20%;
   }
   .card--avatar {
-    width: 100%;
-    height: 17rem;
+    height: 100%;
+    height: 15rem;
     object-fit: cover;
     margin-bottom: 0.5rem;
   }
@@ -63,6 +67,7 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
   @media (max-width: 768px) {
   .container {
     gap: 0.5rem;
+    margin: 0 0.5rem;
   }
   .card {
     width: 92%;

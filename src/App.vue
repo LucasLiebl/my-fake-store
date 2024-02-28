@@ -1,9 +1,8 @@
 <script setup>
-import ListagemProdutos from '@/components/ListagemProdutos.vue';
-import MenuSuperior from '@/components/MenuSuperior.vue';
+import { RouterView } from 'vue-router';
+
 </script>
 
 <template>
-  <MenuSuperior />
-  <ListagemProdutos />
+  <RouterView></RouterView>
 </template>
