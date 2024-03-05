@@ -1,6 +1,10 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
+import { useScreen } from '@/composables/screen';
+
+const { browserWidth, deviceWidth, isMobile } = useScreen();
+
 const produtos = ref([]);
 
 onMounted(async () => {
@@ -12,6 +16,7 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
 </script>
 
 <template>
+
     <div>
       <h1>Produtos</h1>
       <div class="container">
@@ -24,6 +29,9 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
         </div>
       </router-link>
       </div>
+    </div>
+    <div class="navbar" v-if="isMobile">
+      
     </div>
   </template>
   <style scoped>
@@ -64,6 +72,11 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
     font-size: 1.1rem;
     margin-top: 0.5rem;
   }
+
+  .navbar{
+    background-color: rgb(0, 117, 226);
+  }
+
   @media (max-width: 768px) {
   .container {
     gap: 0.5rem;
