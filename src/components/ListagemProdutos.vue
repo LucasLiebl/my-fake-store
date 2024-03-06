@@ -17,7 +17,7 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
 
 <template>
 
-    <div>
+    <div class="main">
       <h1>Produtos</h1>
       <div class="container">
         <router-link to="produto">
@@ -32,6 +32,9 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
     </div>
   </template>
   <style scoped>
+  .main{
+    background-color: #bbbbbb;
+  }
   .container a {
     display: flex;
     flex-wrap: wrap;
@@ -68,6 +71,9 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
     text-transform: capitalize;
     font-size: 1.1rem;
     margin-top: 0.5rem;
+  }
+  h1{
+    color: #e74c3c;
   }
 
   @media (max-width: 768px) {

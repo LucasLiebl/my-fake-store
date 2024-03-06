@@ -5,6 +5,7 @@ import CartPlus from 'vue-material-design-icons/CartPlus.vue';
 import Account from 'vue-material-design-icons/Account.vue';
 import Menu from 'vue-material-design-icons/Menu.vue';
 
+
 const menuAberto = ref(false);
 </script>
 <template>
@@ -31,13 +32,14 @@ const menuAberto = ref(false);
   </template>
   <style scoped>
   header {
-    background: #fff;
+    background: #e74c3c;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     padding: 0.2rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+    color: white; 
+   }
   
   .header--logo {
     display: flex;
@@ -76,7 +78,7 @@ const menuAberto = ref(false);
       display: flex;
       flex-direction: column;
       position: absolute;
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: #e74c3c;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
       border-radius: 10px;
       right: 0;
