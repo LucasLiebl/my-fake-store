@@ -30,9 +30,6 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
       </router-link>
       </div>
     </div>
-    <div class="navbar" v-if="isMobile">
-      
-    </div>
   </template>
   <style scoped>
   .container a {
@@ -71,10 +68,6 @@ const formatPrice = (price) => `R$ ${price.toFixed(2).replace('.', ',')}`;
     text-transform: capitalize;
     font-size: 1.1rem;
     margin-top: 0.5rem;
-  }
-
-  .navbar{
-    background-color: rgb(0, 117, 226);
   }
 
   @media (max-width: 768px) {
