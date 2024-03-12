@@ -1,13 +1,9 @@
 <script setup>
-
-import ListagemProdutos from '@/components/ListagemProdutos.vue';
-import MenuSuperior from '@/components/MenuSuperior.vue';
-import NavBar from '@/components/NavBar.vue';
-
+  import ListagemProdutos from '@/components/ListagemProdutos.vue';
 </script>
 
 <template>
-   <MenuSuperior />
   <ListagemProdutos />
-  <NavBar/>
 </template>
+
+<style scoped></style>
