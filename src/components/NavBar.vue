@@ -1,7 +1,7 @@
 <script setup>
 import { useScreen } from '@/composables/screen';
 
-import { Account } from 'vue-material-design-icons/Account.vue';
+import  Account  from 'vue-material-design-icons/Account.vue';
 
 const { isMobile } = useScreen();
 </script>
